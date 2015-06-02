@@ -38,15 +38,17 @@
 		public function get_conversation($target_user)
 		{
 			
-			$tweet_collection = $this->my_connection->get('search/tweets', array('q' => '%40'.$target_user));
+			$tweet_collection = $this->my_connection->get('statuses/user_timeline', array('screen_name' => $this->screen_name));
+			//var_dump($tweet_collection);
 			$required_tweet_array = array();
 			$conversation = array();
 				
-			foreach($tweet_collection->{'statuses'} as $status)
+			foreach($tweet_collection as $status)
 			{
 				//echo $status->{'text'};
-				if($status->{"user"}->{"id_str"} === $this->twitter_id)
+				if($status->{"in_reply_to_screen_name"} === $target_user)		// Fetch only those tweets
 				{
+					//echo $status->{"in_reply_to_screen_name"};
 					array_push($required_tweet_array, $status);
 				}
 			}
