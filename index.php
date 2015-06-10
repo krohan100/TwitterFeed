@@ -104,6 +104,7 @@ include_once("twitterstats.php");
 	</style>
 </head>
 <!-- Piwik -->
+<!-- Lines between the script tags is a tracking code used for tracking user related events. Comment it out if you want to disable it -->
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["setCookieDomain", "*.localhost"]);
@@ -169,7 +170,7 @@ include_once("twitterstats.php");
 
 		//Get conversation with  another user--------------------------------------------------------------------------------------------------------------------
 
-		$conversation = $user_stat->get_conversation("ug201210029");
+		$conversation = $user_stat->get_conversation("<target-user>");
 
 		echo '<div class="tweet_list"><strong> Friends Conversations : </strong>';
 		echo '<ul>';
