@@ -1,5 +1,5 @@
 <?php
-define('CONSUMER_KEY', 'uwCKUmyZUSKta4GS6tC76Zmax');
-define('CONSUMER_SECRET', 'rM6cjbOwkBwVh11M0nbqD8dd5JJEbDlQgnNWIThuXEqAzCpetI');
-define('OAUTH_CALLBACK', 'http://localhost/new3/process.php');
+define('CONSUMER_KEY', '<YOUR-CONSUMER_KEY>');
+define('CONSUMER_SECRET', '<YOUR-CONSUMER-SECRET-KEY>');
+define('OAUTH_CALLBACK', '<YOUR-OAUTH-CALLBACK-URL>');
 ?>
